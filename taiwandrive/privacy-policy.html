@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the Taiwan Driving Assistant Android application.">
+  <title>Taiwan Driving Assistant Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #f3f7ff;
+      --panel: #ffffff;
+      --text: #1f2f57;
+      --muted: #556887;
+      --accent: #355287;
+      --line: #d8e3f5;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Noto Sans", "Noto Sans TC", sans-serif;
+      background: linear-gradient(180deg, #f7faff 0%, #edf4ff 52%, #e5f1eb 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 18px 50px rgba(53, 82, 135, 0.08);
+    }
+
+    h1, h2 { margin: 0 0 12px; line-height: 1.25; }
+    h1 { font-size: 2rem; }
+    h2 { margin-top: 28px; font-size: 1.1rem; }
+    p, li { color: var(--muted); font-size: 1rem; }
+    ul { padding-left: 20px; margin: 10px 0 0; }
+    a { color: var(--accent); }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #ecf3ff;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .meta { margin: 0 0 18px; font-weight: 600; color: var(--text); }
+    .language { margin-top: 42px; padding-top: 34px; border-top: 1px solid var(--line); }
+
+    @media (max-width: 600px) {
+      main { padding: 16px 12px 32px; }
+      .card { padding: 24px 20px; border-radius: 18px; }
+      h1 { font-size: 1.65rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="card">
+      <div class="eyebrow">Privacy Policy</div>
+      <h1>Taiwan Driving Assistant Privacy Policy</h1>
+      <p class="meta">Effective date: October 25, 2026</p>
+
+      <p>Taiwan Driving Assistant (台灣行車助手) shows current-road speed limits and gives voice alerts before published speed enforcement camera locations in Taiwan, using offline data on the phone. It is developed by Makson Lee. This Privacy Policy explains how the Android application handles user and device data.</p>
+
+      <h2>1. Location</h2>
+      <p>While the user has started driving assistance, the app receives precise location from Android's location service (Google Play services Fused Location Provider) and matches it against offline road data on the device. Location is used only for this on-device matching and is never sent to the developer. The app does not store location or route history; the session ends when the user stops it.</p>
+      <p>The app requests location only while it is in use, through a visible foreground service that the user starts and stops. It does not request background location access. Location provided by Android and Google Play services is subject to the device's location settings and Google's own privacy policy.</p>
+
+      <h2>2. Offline data downloads</h2>
+      <p>The app downloads its offline road and camera data from the developer's update server at taiwandrive.maksonlee.com. These requests contain no location, account, or identifier created by the app. As with any web request, the server receives the device's IP address and the standard HTTP information sent by Android, which includes the Android version and device model.</p>
+      <p>The update server records standard access logs (IP address, time, requested file, response, and HTTP user agent). They are used only to operate and secure the update service, are not combined with other data, and are deleted by routine log rotation after about two weeks. Network infrastructure in front of the server may record similar connection metadata for the same purpose.</p>
+
+      <h2>3. Information stored on the device</h2>
+      <p>The app stores the downloaded offline data and update progress in its private storage. A language chosen in the app is kept by Android's per-app language setting. Diagnostics are a bounded set of technical reason codes and timings kept only in memory; they do not include coordinates or route history and are discarded when the app process ends.</p>
+      <p>The user can export the offline data or import an offline data file through a location the user chooses. Exports contain the road and source data, not driving history.</p>
+
+      <h2>4. Voice alerts</h2>
+      <p>Spoken alerts use the text-to-speech engine selected in the device settings, with an offline voice where installed. The alert text is handled by that engine on the device and is governed by its provider's policy.</p>
+
+      <h2>5. Collection, sharing, and third parties</h2>
+      <p>The app contains no advertising, analytics, account system, or remote crash-reporting SDK. The developer does not collect, sell, rent, or share personal data through the app. Source and license links open in the user's browser only when the user selects them.</p>
+
+      <h2>6. Data retention and deletion</h2>
+      <p>Offline data remains on the device until the user clears app storage or uninstalls the app. The app does not create an account, so the developer holds no account or driving data to delete. Update-server access logs are deleted as described in section 2.</p>
+
+      <h2>7. Permissions</h2>
+      <p>Precise location is used for on-device road matching while driving assistance is active. Foreground-service permissions keep that user-started session and its spoken alerts running and visible. Notifications show the session controls and data download progress. Internet and network-state access are used only for offline data updates.</p>
+
+      <h2>8. Data sources</h2>
+      <p>The offline data is derived from public data published by Taiwan's National Police Agency and Freeway Bureau, MOTC, and from OpenStreetMap (© OpenStreetMap contributors, ODbL). The app is independent and is not affiliated with or endorsed by any government agency.</p>
+
+      <h2>9. Children</h2>
+      <p>The app is a driving aid intended for adult drivers. It is not directed to children.</p>
+
+      <h2>10. Changes to this policy</h2>
+      <p>Material changes to this Privacy Policy will be reflected by updating the effective date on this page.</p>
+
+      <h2>11. Contact</h2>
+      <p>Questions about this Privacy Policy can be sent to <a href="mailto:cdlee123@gmail.com">cdlee123@gmail.com</a>.</p>
+
+      <section class="language" lang="zh-Hant">
+        <div class="eyebrow">隱私權政策</div>
+        <h1>台灣行車助手隱私權政策</h1>
+        <p class="meta">生效日期：2026 年 10 月 25 日</p>
+
+        <p>台灣行車助手（Taiwan Driving Assistant）以手機上的離線資料，顯示目前道路速限，並在接近台灣已公告的測速照相地點前以語音提醒，由 Makson Lee 開發。本政策說明 Android 應用程式如何處理使用者與裝置資料。</p>
+
+        <h2>1. 位置</h2>
+        <p>使用者開始行車提醒後，應用程式會從 Android 定位服務（Google Play 服務的融合式位置提供者）取得精確位置，並在裝置上與離線道路資料比對。位置只用於這項裝置端比對，絕不會傳送給開發者。應用程式不保存位置或行車路線紀錄；使用者停止提醒後，該次行程即結束。</p>
+        <p>應用程式只在使用中要求位置，並透過使用者自行開始與停止、且持續可見的前景服務執行，不要求背景位置權限。Android 與 Google Play 服務提供的位置，另受裝置定位設定與 Google 隱私權政策規範。</p>
+
+        <h2>2. 離線資料下載</h2>
+        <p>應用程式會從開發者的更新伺服器 taiwandrive.maksonlee.com 下載離線道路與測速資料。這些請求不包含位置、帳號或應用程式產生的識別碼。如同一般網路請求，伺服器會收到裝置的 IP 位址，以及 Android 送出的標準 HTTP 資訊，其中包含 Android 版本與裝置型號。</p>
+        <p>更新伺服器會記錄標準存取記錄（IP 位址、時間、請求的檔案、回應狀態與 HTTP User-Agent），僅用於維運與保護更新服務，不與其他資料結合，並由例行記錄輪替於約兩週後刪除。伺服器前端的網路設備也可能基於相同目的記錄類似的連線資訊。</p>
+
+        <h2>3. 儲存在裝置上的資訊</h2>
+        <p>應用程式會在私有儲存空間保存下載的離線資料與更新進度。在應用程式內選擇的語言由 Android 的個別應用程式語言設定保存。診斷資料只是有限筆數的技術原因代碼與時間，只存在記憶體中，不包含座標或路線紀錄，應用程式程序結束後即消失。</p>
+        <p>使用者可將離線資料匯出到自行選擇的位置，或從自行選擇的檔案匯入。匯出內容是道路與來源資料，不包含行車紀錄。</p>
+
+        <h2>4. 語音提醒</h2>
+        <p>語音提醒使用裝置設定中選定的文字轉語音引擎，並在已安裝時使用離線語音。提醒文字由該引擎在裝置上處理，並受其提供者的政策規範。</p>
+
+        <h2>5. 蒐集、分享與第三方</h2>
+        <p>應用程式不含廣告、分析、帳號系統或遠端當機回報 SDK。開發者不會透過應用程式蒐集、販售、出租或分享個人資料。資料來源與授權連結只在使用者點選時，以瀏覽器開啟。</p>
+
+        <h2>6. 保存與刪除</h2>
+        <p>離線資料會留在裝置上，直到使用者清除應用程式資料或移除應用程式。應用程式不建立帳號，因此開發者沒有帳號或行車資料需要刪除。更新伺服器存取記錄依第 2 節說明刪除。</p>
+
+        <h2>7. 權限</h2>
+        <p>精確位置用於行車提醒期間的裝置端道路比對。前景服務權限讓使用者自行開始的行程與語音提醒持續執行並保持可見。通知用於顯示行程控制與資料下載進度。網際網路與網路狀態權限只用於離線資料更新。</p>
+
+        <h2>8. 資料來源</h2>
+        <p>離線資料取自內政部警政署與交通部高速公路局公開的資料，以及 OpenStreetMap（© OpenStreetMap contributors，ODbL）。本應用程式為獨立開發，與任何政府機關無關，也未獲其背書。</p>
+
+        <h2>9. 兒童</h2>
+        <p>本應用程式是提供成年駕駛人使用的行車輔助工具，不以兒童為目標使用者。</p>
+
+        <h2>10. 政策變更</h2>
+        <p>若本政策有重大變更，將更新本頁面的生效日期。</p>
+
+        <h2>11. 聯絡方式</h2>
+        <p>若對本隱私權政策有任何問題，請寄信至 <a href="mailto:cdlee123@gmail.com">cdlee123@gmail.com</a>。</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
