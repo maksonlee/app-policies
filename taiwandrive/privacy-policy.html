@@ -74,12 +74,12 @@
     <article class="card">
       <div class="eyebrow">Privacy Policy</div>
       <h1>Taiwan Driving Assistant Privacy Policy</h1>
-      <p class="meta">Effective date: October 25, 2026</p>
+      <p class="meta">Effective date: October 31, 2026</p>
 
       <p>Taiwan Driving Assistant (台灣行車助手) shows current-road speed limits and gives voice alerts before published speed enforcement camera locations in Taiwan, using offline data on the phone. It is developed by Makson Lee. This Privacy Policy explains how the Android application handles user and device data.</p>
 
       <h2>1. Location</h2>
-      <p>While the user has started driving assistance, the app receives precise location from Android's location service (Google Play services Fused Location Provider) and matches it against offline road data on the device. Location is used only for this on-device matching and is never sent to the developer. The app does not store location or route history; the session ends when the user stops it.</p>
+      <p>While the user has started driving assistance, the app receives precise location from Android's location service (Google Play services Fused Location Provider) and matches it against offline road data on the device. By default, location is used only for this on-device matching: the app does not store location or route history, and the session ends when the user stops it. The only exception is the optional drive recording described in section 6, which is off unless the user turns it on; even then, location reaches the developer only when the user confirms an upload.</p>
       <p>The app requests location only while it is in use, through a visible foreground service that the user starts and stops. It does not request background location access. Location provided by Android and Google Play services is subject to the device's location settings and Google's own privacy policy.</p>
 
       <h2>2. Offline data downloads</h2>
@@ -89,40 +89,46 @@
       <h2>3. Information stored on the device</h2>
       <p>The app stores the downloaded offline data and update progress in its private storage. A language chosen in the app is kept by Android's per-app language setting. Diagnostics are a bounded set of technical reason codes and timings kept only in memory; they do not include coordinates or route history and are discarded when the app process ends.</p>
       <p>The user can export the offline data or import an offline data file through a location the user chooses. Exports contain the road and source data, not driving history.</p>
+      <p>If the user turns on Settings › Developer › Record drive data (off by default), each later drive is saved in the app's own storage as described in section 6. The newest 20 recordings are kept; older ones are deleted automatically, and the user can delete all of them at any time.</p>
 
       <h2>4. Voice alerts</h2>
       <p>Spoken alerts use the text-to-speech engine selected in the device settings, with an offline voice where installed. The alert text is handled by that engine on the device and is governed by its provider's policy.</p>
 
       <h2>5. Collection, sharing, and third parties</h2>
-      <p>The app contains no advertising, analytics, account system, or remote crash-reporting SDK. The developer does not collect, sell, rent, or share personal data through the app. Source and license links open in the user's browser only when the user selects them.</p>
+      <p>The app contains no advertising, analytics, account system, or remote crash-reporting SDK. Apart from drive recordings that a user explicitly uploads (section 6), the developer does not collect personal data through the app, and the developer never sells, rents, or shares personal data. Source and license links open in the user's browser only when the user selects them.</p>
 
-      <h2>6. Data retention and deletion</h2>
-      <p>Offline data remains on the device until the user clears app storage or uninstalls the app. The app does not create an account, so the developer holds no account or driving data to delete. Update-server access logs are deleted as described in section 2.</p>
+      <h2>6. Optional drive recording and upload</h2>
+      <p>For development, the user can turn on Record drive data in the app's settings. It is off by default. While it is on, each drive the user starts is recorded on the device: every location fix with its time, accuracy, speed, bearing and altitude; the app's road-matching decisions; satellite signal status; accelerometer and gyroscope readings; and the app version, data version, device model and Android version.</p>
+      <p>A recording leaves the device only when the user shares it through the system share sheet, copies it over USB, or confirms an upload in the app. An upload sends that single recording over HTTPS to taiwandrive.maksonlee.com. Before uploading, the app asks Google Play for a Play Integrity verdict so that the server can confirm the request comes from the genuine app installed from Google Play; Google Play processes that request under Google's privacy policy. The server keeps the recording, its size and checksum, the app version code and a summary of the integrity verdict. It does not store the integrity token or the device's IP address with the recording; the standard access logs described in section 2 still apply.</p>
+      <p>Uploaded recordings are used only to analyse and improve road matching, are not shared, and are deleted after 180 days. To have an upload deleted sooner, email the upload ID shown in the app to the contact address below.</p>
 
-      <h2>7. Permissions</h2>
-      <p>Precise location is used for on-device road matching while driving assistance is active. Foreground-service permissions keep that user-started session and its spoken alerts running and visible. Notifications show the session controls and data download progress. Internet and network-state access are used only for offline data updates.</p>
+      <h2>7. Data retention and deletion</h2>
+      <p>Offline data and any drive recordings remain on the device until the user deletes them in the app, clears app storage, or uninstalls the app. The app does not create an account. The developer holds driving data only for recordings a user chose to upload; they are deleted after 180 days, or earlier on request, as described in section 6. Update-server access logs are deleted as described in section 2.</p>
 
-      <h2>8. Data sources</h2>
+      <h2>8. Permissions</h2>
+      <p>Precise location is used for on-device road matching while driving assistance is active. Foreground-service permissions keep that user-started session and its spoken alerts running and visible. Notifications show the session controls and data download progress. Internet and network-state access are used for offline data updates and for uploads the user confirms. While a drive is recorded, the optional drive recording also reads the motion sensors and satellite status; this needs no additional permission.</p>
+
+      <h2>9. Data sources</h2>
       <p>The offline data is derived from public data published by Taiwan's National Police Agency and Freeway Bureau, MOTC, and from OpenStreetMap (© OpenStreetMap contributors, ODbL). The app is independent and is not affiliated with or endorsed by any government agency.</p>
 
-      <h2>9. Children</h2>
+      <h2>10. Children</h2>
       <p>The app is a driving aid intended for adult drivers. It is not directed to children.</p>
 
-      <h2>10. Changes to this policy</h2>
+      <h2>11. Changes to this policy</h2>
       <p>Material changes to this Privacy Policy will be reflected by updating the effective date on this page.</p>
 
-      <h2>11. Contact</h2>
+      <h2>12. Contact</h2>
       <p>Questions about this Privacy Policy can be sent to <a href="mailto:cdlee123@gmail.com">cdlee123@gmail.com</a>.</p>
 
       <section class="language" lang="zh-Hant">
         <div class="eyebrow">隱私權政策</div>
         <h1>台灣行車助手隱私權政策</h1>
-        <p class="meta">生效日期：2026 年 10 月 25 日</p>
+        <p class="meta">生效日期：2026 年 10 月 31 日</p>
 
         <p>台灣行車助手（Taiwan Driving Assistant）以手機上的離線資料，顯示目前道路速限，並在接近台灣已公告的測速照相地點前以語音提醒，由 Makson Lee 開發。本政策說明 Android 應用程式如何處理使用者與裝置資料。</p>
 
         <h2>1. 位置</h2>
-        <p>使用者開始行車提醒後，應用程式會從 Android 定位服務（Google Play 服務的融合式位置提供者）取得精確位置，並在裝置上與離線道路資料比對。位置只用於這項裝置端比對，絕不會傳送給開發者。應用程式不保存位置或行車路線紀錄；使用者停止提醒後，該次行程即結束。</p>
+        <p>使用者開始行車提醒後，應用程式會從 Android 定位服務（Google Play 服務的融合式位置提供者）取得精確位置，並在裝置上與離線道路資料比對。預設情況下，位置只用於這項裝置端比對：應用程式不保存位置或行車路線紀錄，使用者停止提醒後，該次行程即結束。唯一的例外是第 6 節說明的選用行車記錄，除非使用者自行開啟，否則不會啟用；即使開啟，位置也只有在使用者確認上傳時才會傳送給開發者。</p>
         <p>應用程式只在使用中要求位置，並透過使用者自行開始與停止、且持續可見的前景服務執行，不要求背景位置權限。Android 與 Google Play 服務提供的位置，另受裝置定位設定與 Google 隱私權政策規範。</p>
 
         <h2>2. 離線資料下載</h2>
@@ -132,29 +138,35 @@
         <h2>3. 儲存在裝置上的資訊</h2>
         <p>應用程式會在私有儲存空間保存下載的離線資料與更新進度。在應用程式內選擇的語言由 Android 的個別應用程式語言設定保存。診斷資料只是有限筆數的技術原因代碼與時間，只存在記憶體中，不包含座標或路線紀錄，應用程式程序結束後即消失。</p>
         <p>使用者可將離線資料匯出到自行選擇的位置，或從自行選擇的檔案匯入。匯出內容是道路與來源資料，不包含行車紀錄。</p>
+        <p>若使用者在「設定 › 開發者 › 記錄行車資料」開啟記錄（預設關閉），之後每趟行車會依第 6 節說明保存在應用程式自己的儲存空間。最多保留最新 20 筆，較舊的會自動刪除，使用者也可隨時全部刪除。</p>
 
         <h2>4. 語音提醒</h2>
         <p>語音提醒使用裝置設定中選定的文字轉語音引擎，並在已安裝時使用離線語音。提醒文字由該引擎在裝置上處理，並受其提供者的政策規範。</p>
 
         <h2>5. 蒐集、分享與第三方</h2>
-        <p>應用程式不含廣告、分析、帳號系統或遠端當機回報 SDK。開發者不會透過應用程式蒐集、販售、出租或分享個人資料。資料來源與授權連結只在使用者點選時，以瀏覽器開啟。</p>
+        <p>應用程式不含廣告、分析、帳號系統或遠端當機回報 SDK。除了使用者主動上傳的行車記錄（第 6 節）之外，開發者不會透過應用程式蒐集個人資料，也絕不販售、出租或分享個人資料。資料來源與授權連結只在使用者點選時，以瀏覽器開啟。</p>
 
-        <h2>6. 保存與刪除</h2>
-        <p>離線資料會留在裝置上，直到使用者清除應用程式資料或移除應用程式。應用程式不建立帳號，因此開發者沒有帳號或行車資料需要刪除。更新伺服器存取記錄依第 2 節說明刪除。</p>
+        <h2>6. 選用的行車記錄與上傳</h2>
+        <p>為了開發需要，使用者可以在應用程式設定中開啟「記錄行車資料」，預設為關閉。開啟期間，使用者開始的每趟行車都會記錄在裝置上：每筆定位的時間、精確度、速度、方向與高度；應用程式的道路比對判斷；衛星訊號狀態；加速度計與陀螺儀讀數；以及應用程式版本、資料版本、裝置型號與 Android 版本。</p>
+        <p>記錄只有在使用者透過系統分享選單分享、以 USB 複製，或在應用程式中確認上傳時，才會離開裝置。上傳會以 HTTPS 將該筆記錄傳送到 taiwandrive.maksonlee.com。上傳前，應用程式會向 Google Play 取得 Play Integrity 驗證結果，讓伺服器確認請求來自從 Google Play 安裝的正版應用程式；該請求由 Google Play 依 Google 隱私權政策處理。伺服器會保存記錄本身、其大小與檢查碼、應用程式版本代碼與驗證結果摘要，不會隨記錄保存驗證權杖或裝置的 IP 位址；第 2 節說明的標準存取記錄仍然適用。</p>
+        <p>上傳的記錄只用於分析與改善道路比對，不會分享，並於 180 天後刪除。若希望提早刪除，請將應用程式顯示的上傳編號寄到下方聯絡信箱。</p>
 
-        <h2>7. 權限</h2>
-        <p>精確位置用於行車提醒期間的裝置端道路比對。前景服務權限讓使用者自行開始的行程與語音提醒持續執行並保持可見。通知用於顯示行程控制與資料下載進度。網際網路與網路狀態權限只用於離線資料更新。</p>
+        <h2>7. 保存與刪除</h2>
+        <p>離線資料與行車記錄會留在裝置上，直到使用者在應用程式中刪除、清除應用程式資料或移除應用程式。應用程式不建立帳號。開發者只會持有使用者選擇上傳的行車記錄，並依第 6 節說明於 180 天後或應要求提早刪除。更新伺服器存取記錄依第 2 節說明刪除。</p>
 
-        <h2>8. 資料來源</h2>
+        <h2>8. 權限</h2>
+        <p>精確位置用於行車提醒期間的裝置端道路比對。前景服務權限讓使用者自行開始的行程與語音提醒持續執行並保持可見。通知用於顯示行程控制與資料下載進度。網際網路與網路狀態權限用於離線資料更新，以及使用者確認的上傳。選用的行車記錄在記錄期間也會讀取動作感測器與衛星狀態，不需要額外權限。</p>
+
+        <h2>9. 資料來源</h2>
         <p>離線資料取自內政部警政署與交通部高速公路局公開的資料，以及 OpenStreetMap（© OpenStreetMap contributors，ODbL）。本應用程式為獨立開發，與任何政府機關無關，也未獲其背書。</p>
 
-        <h2>9. 兒童</h2>
+        <h2>10. 兒童</h2>
         <p>本應用程式是提供成年駕駛人使用的行車輔助工具，不以兒童為目標使用者。</p>
 
-        <h2>10. 政策變更</h2>
+        <h2>11. 政策變更</h2>
         <p>若本政策有重大變更，將更新本頁面的生效日期。</p>
 
-        <h2>11. 聯絡方式</h2>
+        <h2>12. 聯絡方式</h2>
         <p>若對本隱私權政策有任何問題，請寄信至 <a href="mailto:cdlee123@gmail.com">cdlee123@gmail.com</a>。</p>
       </section>
     </article>
