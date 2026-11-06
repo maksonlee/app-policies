@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReadyTerm Privacy Policy</title>
+  <title>Termstay Privacy Policy</title>
   <style>
     :root {
       --bg: #f3f7ff;
@@ -92,44 +92,46 @@
   <main>
     <section class="card">
       <div class="eyebrow">Privacy Policy</div>
-      <h1>ReadyTerm Privacy Policy</h1>
-      <p class="meta">Effective date: November 2, 2026</p>
+      <h1>Termstay Privacy Policy</h1>
+      <p class="meta">Effective date: November 6, 2026</p>
 
-      <p>ReadyTerm for Android is developed by Makson Lee. This Privacy Policy explains how ReadyTerm for Android handles user data.</p>
+      <p>Termstay for Android is developed by Makson Lee. This Privacy Policy explains how Termstay for Android handles user data.</p>
 
       <h2>1. Core functionality</h2>
-      <p>ReadyTerm for Android connects your phone to a Windows PC that you choose and that runs ReadyTerm with Sharing turned on. It lists the terminal sessions running on that PC, shows their output, and lets you type into a session you take control of.</p>
+      <p>Termstay for Android connects your phone to your own Termstay server: the Termstay server on Ubuntu, or Termstay on a Windows PC with Sharing turned on. It starts SSH sessions on that server from the connections you save, lists the sessions running there, shows their output, and lets you type into a session you take control of.</p>
 
-      <h2>2. Direct connection to your own PC</h2>
-      <p>The app connects directly to the PC you add. It does not use developer-controlled servers, accounts, cloud services, or relays. Session output and what you type travel only between your phone and your PC.</p>
+      <h2>2. Direct connection to your own server</h2>
+      <p>The app connects directly to the servers you add. It does not use developer-controlled servers, accounts, cloud services, or relays. Session output and what you type travel only between your phone, your server and the SSH host you connect to. The password or key a session signs in with goes only to your server, which uses it to sign in to that SSH host.</p>
       <p>The app handles only:</p>
       <ul>
-        <li>the IP address and port of each PC you add</li>
-        <li>each PC's identity, and the access that PC grants your phone</li>
+        <li>the IP address and port of each server you add</li>
+        <li>each server's identity, and the access that server grants your phone</li>
+        <li>the connections you save: their names, hosts, ports and usernames</li>
+        <li>the passwords you choose to have it remember, and the private keys you give it</li>
         <li>the output of the sessions you open, and what you type into them</li>
       </ul>
 
       <h2>3. Data collection</h2>
-      <p>ReadyTerm for Android does not require user accounts and does not collect personal information such as name, email address, phone number, location, or payment information.</p>
-      <p>ReadyTerm for Android contains no advertising and does not collect analytics. The developer receives none of the data the app handles.</p>
+      <p>Termstay for Android does not require user accounts and does not collect personal information such as name, email address, phone number, location, or payment information.</p>
+      <p>Termstay for Android contains no advertising and does not collect analytics. The developer receives none of the data the app handles.</p>
 
       <h2>4. Permissions and device access</h2>
-      <p>ReadyTerm for Android requests only network access, so the app can reach the PC you add. It does not keep a connection open in the background: when you return to the app, it connects to your PC again.</p>
+      <p>Termstay for Android requests only network access, so the app can reach the servers you add. It does not keep a connection open in the background: when you return to the app, it connects to your servers again.</p>
 
       <h2>5. Data sharing</h2>
-      <p>ReadyTerm for Android does not sell, rent, or share personal data with third parties.</p>
-      <p>The app may rely on standard Android and Google Play platform components to run on the device, but it does not transmit session output, what you type, or usage data to developer-operated services.</p>
+      <p>Termstay for Android does not sell, rent, or share personal data with third parties.</p>
+      <p>The app may rely on standard Android and Google Play platform components to run on the device, but it does not transmit session output, what you type, passwords, keys, or usage data to developer-operated services.</p>
 
       <h2>6. Data retention and deletion</h2>
-      <p>The PCs you add, with their identities and access grants, stay in the app's private storage on your device until you remove them, clear the app's data, or uninstall the app.</p>
+      <p>The servers you add, with their identities and access grants, and the connections, passwords and private keys you save stay in the app's private storage on your device until you remove them, clear the app's data, or uninstall the app.</p>
       <p>Terminal output is kept only while a session is open in the app. The developer retains no user data.</p>
 
       <h2>7. Security</h2>
-      <p>The connection to your PC is encrypted, and the app checks the PC's identity each time it connects. A PC must approve your phone before the phone can see or control any of its sessions, and the PC can revoke that access at any time.</p>
-      <p>ReadyTerm for Android never starts sessions on its own and holds no SSH passwords or keys; those stay on your PC.</p>
+      <p>The connection to your server is encrypted, and the app checks the server's identity each time it connects. A server must approve your phone before the phone can see, start or control any of its sessions, and the server can revoke that access at any time.</p>
+      <p>Passwords and private keys are stored encrypted with a key held in Android's keystore. They are sent only to your own server, over that encrypted connection, when a session signs in; the server uses them for that sign-in and does not store them.</p>
 
       <h2>8. Children</h2>
-      <p>ReadyTerm for Android is intended for adults and is not directed to children.</p>
+      <p>Termstay for Android is intended for adults and is not directed to children.</p>
 
       <h2>9. Changes to this policy</h2>
       <p>This Privacy Policy may be updated from time to time. The latest version will be made available at the published policy URL.</p>
